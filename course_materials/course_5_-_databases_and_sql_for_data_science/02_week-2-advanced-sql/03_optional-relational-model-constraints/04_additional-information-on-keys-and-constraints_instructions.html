@@ -1,0 +1,131 @@
+<meta charset="utf-8"/>
+<co-content>
+ <h1 level="1">
+  Additional Information
+ </h1>
+ <p>
+  This section gives more detailed explanation about concepts that were not covered in the videos in this module.
+ </p>
+ <p>
+ </p>
+ <h2 level="2">
+  Primary Keys
+ </h2>
+ <p>
+  If a relation schema has more than one key, then each key is called a candidate key.One of the candidate keys is designated as the primary key, and the others are called secondary keys.
+ </p>
+ <p>
+  In a practical relational database, each relation schema must have a primary key.
+ </p>
+ <p>
+  Rules for primary keys:
+ </p>
+ <p>
+  The value of the Primary Key must be unique for each instance of the entity.
+ </p>
+ <p>
+  There can be no missing values( ie. Not Null) for Primary Keys. If the Primary Key is composed of multiple attributes, each of those attributes must have a value for each instance.
+ </p>
+ <p>
+  The Primary Key is immutable.i.e., once created the value of the Primary Key cannot be changed.
+ </p>
+ <p>
+  If the Primary Key consists of multiple attributes, none of these values can be updated.
+ </p>
+ <p>
+ </p>
+ <h2 level="2">
+  Semantic Integrity
+ </h2>
+ <p>
+  Semantic integrity ensures that data entered into a row reflects an allowable value for that row. The value must be within the domain, or allowable set of values, for that column. For example, the quantity column of the items table permits only numbers. If a value outside the domain can be entered into a column, the semantic integrity of the data is violated.
+ </p>
+ <p>
+ </p>
+ <h2 level="2">
+  Semantic Constraints
+ </h2>
+ <p>
+  Semantic Constraints are constraints that cannot be directly expressed in the schemas of the data model. Semantic constraints are also called application-based rules or business rules.  They are additional rules specified by users or database administrators. For example, a class can have a maximum of 30 students; salary of an employee cannot exceed the salary of the employee’s manager.
+ </p>
+ <p>
+  Domain constraints specify that within a tuple the value of each attribute must be an element from the domain of that attribute. The data types associated with the domains include:
+ </p>
+ <p>
+  Integers (short integer, integer, long integer)
+ </p>
+ <p>
+  Real numbers (float and double precision float)
+ </p>
+ <p>
+  Characters
+ </p>
+ <p>
+  Booleans
+ </p>
+ <p>
+  Fixed-length strings and variable length strings
+ </p>
+ <p>
+  Date, time, timestamp
+ </p>
+ <p>
+  Money
+ </p>
+ <p>
+  Other special data types
+ </p>
+ <p>
+  Other possible domain values may be a sub-range of values from a data type or as an enumerated data type in which values are explicitly listed.
+ </p>
+ <p>
+ </p>
+</co-content>
+<style>
+ body {
+    padding: 50px 85px 50px 85px;
+}
+
+table th, table td {
+    border: 1px solid #e0e0e0;
+    padding: 5px 20px;
+    text-align: left;
+}
+input {
+    margin: 10px;
+}
+}
+th {
+    font-weight: bold;
+}
+td, th {
+    display: table-cell;
+    vertical-align: inherit;
+}
+img {
+    height: auto;
+    max-width: 100%;
+}
+pre {
+    display: block;
+    margin: 20px;
+    background: #424242;
+    color: #fff;
+    font-size: 13px;
+    white-space: pre-wrap;
+    padding: 9.5px;
+    margin: 0 0 10px;
+    border: 1px solid #ccc;
+}
+</style>
+<script async="" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript">
+</script>
+<script type="text/x-mathjax-config">
+ MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$$','$$'], ['$','$'] ],
+      displayMath: [ ["\\[","\\]"] ],
+      processEscapes: true
+    }
+  });
+</script>

@@ -1,0 +1,99 @@
+<meta charset="utf-8"/>
+<co-content>
+ <p>
+  In this reading we will briefly discuss a few useful options used with SELECT statements.
+ </p>
+ <p>
+  <strong>
+   COUNT
+  </strong>
+ </p>
+ <p>
+  COUNT() is a built in database function that retrieves the number of rows that match the query criteria. To get the total number of rows in a given table, simply issue:
+ </p>
+ <pre language="sql">select COUNT(*) from tablename</pre>
+ <p>
+  Let's say you can a table called MEDALS in which with a column called COUNTRY and you want to retrieve the number of rows where the medal recipient is from CANADA. You can issue a query like:
+ </p>
+ <pre language="sql">select COUNT(COUNTRY) from MEDALS where COUNTRY='CANADA'</pre>
+ <p>
+ </p>
+ <p>
+  <strong>
+   DISTINCT
+  </strong>
+ </p>
+ <p>
+  DISTINCT is used to remove duplicate values from a result set. To retrieve unique values in a column issue:
+ </p>
+ <pre language="sql">select DISTINCT columnname from tablename</pre>
+ <p>
+  In the MEDALS table mentioned above there may be a lot of rows where the COUNTRY value is CANADA. Let's say you want to retrieve the list of unique countries that received GOLD medals, that is, removing all duplicate values of the same country. To do so, issue a query like:
+ </p>
+ <pre language="sql">select DISTINCT COUNTRY from MEDALS where MEDALTYPE = 'GOLD'</pre>
+ <p>
+ </p>
+ <p>
+  <strong>
+   LIMIT
+  </strong>
+ </p>
+ <p>
+  LIMIT is used for restricting the number of rows retrieved from the database. To retrieve just the first 10 rows in a table:
+ </p>
+ <pre language="sql">select * from tablename LIMIT 10</pre>
+ <p>
+  This can be very useful to examine the result set by looking at just a few rows instead of retrieving the entire result set which may be very large. For example to retrieve just a few rows in the MEDALS table for a particular year, you can issue:
+ </p>
+ <pre language="sql">select * MEDALS where YEAR = 2018 LIMIT 5</pre>
+ <p>
+ </p>
+</co-content>
+<style>
+ body {
+    padding: 50px 85px 50px 85px;
+}
+
+table th, table td {
+    border: 1px solid #e0e0e0;
+    padding: 5px 20px;
+    text-align: left;
+}
+input {
+    margin: 10px;
+}
+}
+th {
+    font-weight: bold;
+}
+td, th {
+    display: table-cell;
+    vertical-align: inherit;
+}
+img {
+    height: auto;
+    max-width: 100%;
+}
+pre {
+    display: block;
+    margin: 20px;
+    background: #424242;
+    color: #fff;
+    font-size: 13px;
+    white-space: pre-wrap;
+    padding: 9.5px;
+    margin: 0 0 10px;
+    border: 1px solid #ccc;
+}
+</style>
+<script async="" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript">
+</script>
+<script type="text/x-mathjax-config">
+ MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$$','$$'], ['$','$'] ],
+      displayMath: [ ["\\[","\\]"] ],
+      processEscapes: true
+    }
+  });
+</script>

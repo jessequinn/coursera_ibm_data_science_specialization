@@ -1,0 +1,301 @@
+1
+00:00:00,199 --> 00:00:05,970
+Welcome to this module of the capstone
+project course. In this video, we will
+
+2
+00:00:05,970 --> 00:00:09,570
+start learning about Foursquare and how
+their data looks like. So let's get
+
+3
+00:00:09,570 --> 00:00:15,839
+started. As a brief introduction for
+those who are still not very clear about
+
+4
+00:00:15,839 --> 00:00:20,820
+Foursquare, Foursquare is a technology
+company that built a massive dataset of
+
+5
+00:00:20,820 --> 00:00:25,410
+location data. What is interesting about
+Foursquare is that they were very smart
+
+6
+00:00:25,410 --> 00:00:29,730
+about building their dataset. They
+actually crowd-sourced their data and had
+
+7
+00:00:29,730 --> 00:00:34,649
+people use their app to build their dataset and add venues and complete any
+
+8
+00:00:34,649 --> 00:00:39,780
+missing information they had in their
+dataset. Currently its location data is
+
+9
+00:00:39,780 --> 00:00:44,430
+the most comprehensive out there, and
+quite accurate that it powers location
+
+10
+00:00:44,430 --> 00:00:49,530
+data for many popular services like
+Apple Maps, Uber, Snapchat, Twitter and
+
+11
+00:00:49,530 --> 00:00:55,230
+many others, and is currently being used
+by over 100,000 developers, and this
+
+12
+00:00:55,230 --> 00:01:01,440
+number is only growing. To try out
+Foursquare you can either use their
+
+13
+00:01:01,440 --> 00:01:08,159
+phone app or their online website. So you
+can go to Foursquare com, and this will
+
+14
+00:01:08,159 --> 00:01:13,530
+be the landing page. In the centre, you
+will find two fields: one for what you're
+
+15
+00:01:13,530 --> 00:01:21,659
+looking for and another one for the
+location of interest. So say it's your
+
+16
+00:01:21,659 --> 00:01:26,670
+first time visiting New York City and
+you're saying at the Conrad hotel, but
+
+17
+00:01:26,670 --> 00:01:31,020
+you're not quite familiar with the area
+and you would like to go for coffee. So
+
+18
+00:01:31,020 --> 00:01:35,520
+what you do is you type words related to
+coffee like coffee or coffee shops and
+
+19
+00:01:35,520 --> 00:01:42,210
+you specify the address around which to
+search. In this case, the Conrad Hotel is
+
+20
+00:01:42,210 --> 00:01:50,399
+at 102 North End Avenue in New York and
+then you hit search. And here are the
+
+21
+00:01:50,399 --> 00:01:55,049
+coffee shops that are returned by
+Foursquare. On the left you see the name,
+
+22
+00:01:55,049 --> 00:01:59,790
+the category, and the address of each of
+the venues serving coffee around the
+
+23
+00:01:59,790 --> 00:02:05,280
+Conrad Hotel. And on the right side, you
+see a map of the venues in the list on
+
+24
+00:02:05,280 --> 00:02:07,640
+the left.
+
+25
+00:02:08,629 --> 00:02:13,480
+According to the map, coffee shop number
+16 is the closest,
+
+26
+00:02:13,480 --> 00:02:20,680
+and is called Kaffe 1668, and has an
+average rating of 9.0. If you click on it
+
+27
+00:02:20,680 --> 00:02:25,659
+on the map, the list on the left scrolls
+to this venue. You can also explore the
+
+28
+00:02:25,659 --> 00:02:30,810
+venue, so if you click on it you will be
+redirected to its page on Foursquare.
+
+29
+00:02:30,810 --> 00:02:37,840
+This is the page pertaining to Kaffe 1668
+on Foursquare. On this page you can find
+
+30
+00:02:37,840 --> 00:02:44,140
+all information in the Foursquare dataset about Kaffe 1668. This includes its
+
+31
+00:02:44,140 --> 00:02:50,110
+name, full address, working hours, menu, and tips and images that users have posted
+
+32
+00:02:50,110 --> 00:02:56,230
+about the shop and any of its drinks. You
+can check out the tips posted, so if you
+
+33
+00:02:56,230 --> 00:03:03,489
+click the tips tab, it will take you to
+the tips section on this page. In this
+
+34
+00:03:03,489 --> 00:03:09,579
+section, you can see how many tips users
+submitted about Kaffe 1668. We can see
+
+35
+00:03:09,579 --> 00:03:15,069
+that there are 338 tips and reviews
+submitted. The first review is by a user
+
+36
+00:03:15,069 --> 00:03:22,750
+named Jessica and her tip was upvoted
+by another user. The review says "Unique
+
+37
+00:03:22,750 --> 00:03:27,849
+coffee options and hipster baristas to
+tell you all about them. Downstairs is
+
+38
+00:03:27,849 --> 00:03:31,569
+usually empty and quiet.
+Don't be turned off by the giant fridge
+
+39
+00:03:31,569 --> 00:03:37,540
+in the room, great space for getting work
+done." At that point, you might decide to
+
+40
+00:03:37,540 --> 00:03:41,590
+know more about this user and check
+if she had given any other tips or
+
+41
+00:03:41,590 --> 00:03:46,120
+reviews about other places nearby. So if
+you click on her name, you'll be
+
+42
+00:03:46,120 --> 00:03:51,190
+redirected to her page on Foursquare.
+This is the page of Jessica on
+
+43
+00:03:51,190 --> 00:03:56,829
+Foursquare. Here you can see that she is
+a very active Foursquare user. She
+
+44
+00:03:56,829 --> 00:04:04,030
+actually posted 269 other tips and
+reviews, and has 38 followers, and is
+
+45
+00:04:04,030 --> 00:04:10,859
+following 36 users. On her page you can
+also see what places she's been to, and
+
+46
+00:04:10,859 --> 00:04:19,449
+what images or tips she posted about
+different places. So you decide to go to
+
+47
+00:04:19,449 --> 00:04:24,820
+Kaffe 1668 for coffee, but you're
+interested in knowing what other spots
+
+48
+00:04:24,820 --> 00:04:29,470
+are popular around the Conrad Hotel so you can go check them out after
+
+49
+00:04:29,470 --> 00:04:33,730
+you have your coffee. You can again use
+the Foursquare website for that. You
+
+50
+00:04:33,730 --> 00:04:37,870
+simply enter the location of interest
+and leave the other field empty.
+
+51
+00:04:37,870 --> 00:04:43,240
+Once you hit Search, Foursquare will
+return all the popular spots around the
+
+52
+00:04:43,240 --> 00:04:49,210
+Conrad Hotel. Notice how now the popular places are of different categories. So
+
+53
+00:04:49,210 --> 00:04:53,830
+there is Central Park which is obviously
+a park and there is the Metropolitan
+
+54
+00:04:53,830 --> 00:04:58,660
+Museum of Art and so on. What is great
+about the Foursquare data is that all
+
+55
+00:04:58,660 --> 00:05:03,100
+this data is available for free so you
+can actually build something similar.
+
+56
+00:05:03,100 --> 00:05:06,400
+Actually, all this data was available for free
+
+57
+00:05:06,400 --> 00:05:12,550
+without any limitations until May 31st
+of 2018. We will learn more about the
+
+58
+00:05:12,550 --> 00:05:19,900
+Foursquare database in the next couple
+of videos. In the next videos, I will
+
+59
+00:05:19,900 --> 00:05:24,790
+demystify the process of communicating
+with the Foursquare database and explain
+
+60
+00:05:24,790 --> 00:05:28,960
+to you what happens under the hood every
+time we clicked the search button to
+
+61
+00:05:28,960 --> 00:05:34,420
+search for coffee shops or learn more
+about a shop or a Foursquare user. So
+
+62
+00:05:34,420 --> 00:05:37,530
+I'll see you in the next video.

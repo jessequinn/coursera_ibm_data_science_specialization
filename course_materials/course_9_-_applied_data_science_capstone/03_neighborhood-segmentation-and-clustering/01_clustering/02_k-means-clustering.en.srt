@@ -1,0 +1,599 @@
+1
+00:00:00,000 --> 00:00:03,385
+Hello, and welcome. In this video,
+
+2
+00:00:03,385 --> 00:00:07,890
+we'll be covering K-Means Clustering. So let's get started.
+
+3
+00:00:07,890 --> 00:00:11,670
+Imagine that you have a customer dataset and you need to
+
+4
+00:00:11,670 --> 00:00:15,615
+apply customer segmentation on this historical data.
+
+5
+00:00:15,615 --> 00:00:19,530
+Customer segmentation is the practice of partitioning
+
+6
+00:00:19,530 --> 00:00:24,750
+a customer base into groups of individuals that have similar characteristics.
+
+7
+00:00:24,750 --> 00:00:31,245
+One of the algorithms that can be used for customer segmentation is K-means clustering.
+
+8
+00:00:31,245 --> 00:00:33,860
+K-means can group data only
+
+9
+00:00:33,860 --> 00:00:38,595
+unsupervised based on the similarity of customers to each other.
+
+10
+00:00:38,595 --> 00:00:41,775
+Let's define this technique more formally.
+
+11
+00:00:41,775 --> 00:00:46,495
+There are various types of clustering algorithms such as partitioning,
+
+12
+00:00:46,495 --> 00:00:50,160
+hierarchical, or density based clustering.
+
+13
+00:00:50,160 --> 00:00:53,740
+K-means is a type of partitioning clustering.
+
+14
+00:00:53,740 --> 00:00:56,835
+That is, it divides the data into k
+
+15
+00:00:56,835 --> 00:01:02,955
+non-overlapping subsets or clusters without any cluster internal structure or labels.
+
+16
+00:01:02,955 --> 00:01:06,810
+This means, it's an unsupervised algorithm.
+
+17
+00:01:06,810 --> 00:01:10,950
+Objects within a cluster are very similar and objects
+
+18
+00:01:10,950 --> 00:01:15,135
+across different clusters are very different or dissimilar.
+
+19
+00:01:15,135 --> 00:01:18,120
+As you can see, for using K-means,
+
+20
+00:01:18,120 --> 00:01:20,120
+we have to find similar samples.
+
+21
+00:01:20,120 --> 00:01:22,765
+For example, similar customers.
+
+22
+00:01:22,765 --> 00:01:25,545
+Now we face a couple of key questions.
+
+23
+00:01:25,545 --> 00:01:29,910
+First, how can we find the similarity of samples in clustering?
+
+24
+00:01:29,910 --> 00:01:32,100
+And then, how do we measure
+
+25
+00:01:32,100 --> 00:01:36,480
+how similar two customers are with regard to their demographics?
+
+26
+00:01:36,480 --> 00:01:40,980
+Though the objective of K-means is to form clusters in such a way that
+
+27
+00:01:40,980 --> 00:01:46,560
+similar samples go into a cluster and dissimilar samples fall into different clusters,
+
+28
+00:01:46,560 --> 00:01:49,910
+it can be shown that instead of a similarity metric,
+
+29
+00:01:49,910 --> 00:01:52,280
+we can use dissimilarity metrics.
+
+30
+00:01:52,280 --> 00:01:54,835
+In other words, conventionally,
+
+31
+00:01:54,835 --> 00:01:59,385
+the distance of samples from each other is used to shape the clusters.
+
+32
+00:01:59,385 --> 00:02:01,450
+So, we can say,
+
+33
+00:02:01,450 --> 00:02:03,320
+K-means tries to minimize
+
+34
+00:02:03,320 --> 00:02:08,755
+the intra-cluster distances and maximize the inter-cluster distances.
+
+35
+00:02:08,755 --> 00:02:11,045
+Now, the question is,
+
+36
+00:02:11,045 --> 00:02:17,665
+how can we calculate the dissimilarity or distance of two cases such as two customers?
+
+37
+00:02:17,665 --> 00:02:20,365
+Assume that we have two customers,
+
+38
+00:02:20,365 --> 00:02:23,100
+we'll call them customer one and two.
+
+39
+00:02:23,100 --> 00:02:26,590
+Let's also assume that we have only one feature for
+
+40
+00:02:26,590 --> 00:02:30,365
+each of these two customers and that feature is age.
+
+41
+00:02:30,365 --> 00:02:32,890
+We can easily use a specific type of
+
+42
+00:02:32,890 --> 00:02:37,120
+Minkowski distance to calculate the distance of these two customers.
+
+43
+00:02:37,120 --> 00:02:40,195
+Indeed, it is the euclidean distance.
+
+44
+00:02:40,195 --> 00:02:43,280
+Distance of x_1 from x_2,
+
+45
+00:02:43,280 --> 00:02:48,340
+is root of 34 minus 30 power two which is four.
+
+46
+00:02:48,340 --> 00:02:51,250
+What about if we have more than one feature,
+
+47
+00:02:51,250 --> 00:02:53,940
+for example, age and income.
+
+48
+00:02:53,940 --> 00:02:58,400
+For example, if we have income and age for each customer,
+
+49
+00:02:58,400 --> 00:03:04,220
+we can still use the same formula but this time in a two-dimensional space.
+
+50
+00:03:04,220 --> 00:03:09,315
+Also we can use the same distance matrix for multidimensional vectors.
+
+51
+00:03:09,315 --> 00:03:11,940
+Of course, we have to normalize our feature
+
+52
+00:03:11,940 --> 00:03:15,375
+set to get the accurate dissimilarity measure.
+
+53
+00:03:15,375 --> 00:03:20,520
+There are other dissimilarity measures as well that can be used for this purpose,
+
+54
+00:03:20,520 --> 00:03:22,080
+but it is highly dependent on
+
+55
+00:03:22,080 --> 00:03:26,320
+datatype and also the domain that clustering is done for it.
+
+56
+00:03:26,320 --> 00:03:29,730
+For example, you may use euclidean distance,
+
+57
+00:03:29,730 --> 00:03:33,865
+cosine similarity, average distance and so on.
+
+58
+00:03:33,865 --> 00:03:38,740
+Indeed, the similarity measure highly controls how the clusters are formed.
+
+59
+00:03:38,740 --> 00:03:40,930
+So, it is recommended to understand
+
+60
+00:03:40,930 --> 00:03:45,050
+the domain knowledge of your dataset and datatype of features,
+
+61
+00:03:45,050 --> 00:03:48,290
+and then choose the meaningful distance measurement.
+
+62
+00:03:48,290 --> 00:03:52,210
+Now, let's see how K-means clustering works.
+
+63
+00:03:52,210 --> 00:03:54,180
+For the sake of simplicity,
+
+64
+00:03:54,180 --> 00:03:57,265
+let's assume that our dataset has only two features,
+
+65
+00:03:57,265 --> 00:03:59,780
+the age and income of customers.
+
+66
+00:03:59,780 --> 00:04:03,260
+This means, it's a two dimensional space.
+
+67
+00:04:03,260 --> 00:04:07,405
+We can show the distribution of customers using a scatter plot.
+
+68
+00:04:07,405 --> 00:04:10,179
+The Y-axis indicates age,
+
+69
+00:04:10,179 --> 00:04:14,130
+and the X-axis shows income of the customers.
+
+70
+00:04:14,130 --> 00:04:17,320
+We try to cluster the customer dataset into
+
+71
+00:04:17,320 --> 00:04:22,015
+distinct groups or clusters based on these two dimensions.
+
+72
+00:04:22,015 --> 00:04:26,510
+In the first step, we should determine the number of clusters.
+
+73
+00:04:26,510 --> 00:04:30,350
+The key concept of the K-means algorithm is that,
+
+74
+00:04:30,350 --> 00:04:33,725
+it randomly picks a center point for each cluster.
+
+75
+00:04:33,725 --> 00:04:39,435
+It means, we must initialize k which represents number of clusters.
+
+76
+00:04:39,435 --> 00:04:43,930
+Essentially, determining the number of clusters in a dataset or
+
+77
+00:04:43,930 --> 00:04:49,440
+K is a hard problem in K-means that we will discuss later.
+
+78
+00:04:49,440 --> 00:04:55,035
+For now, let's put K equals three here for our sample dataset.
+
+79
+00:04:55,035 --> 00:04:59,770
+It is like we have three representative points for our clusters.
+
+80
+00:04:59,770 --> 00:05:04,075
+These three data points are called centroids of clusters
+
+81
+00:05:04,075 --> 00:05:08,845
+and should be of same feature size of our customer feature set.
+
+82
+00:05:08,845 --> 00:05:13,060
+There are two approaches to choose these centroids.
+
+83
+00:05:13,060 --> 00:05:17,530
+One, we can randomly choose three observations out of
+
+84
+00:05:17,530 --> 00:05:21,865
+the dataset and use these observations as the initial means,
+
+85
+00:05:21,865 --> 00:05:26,500
+or two, we can create three random points as centroids of
+
+86
+00:05:26,500 --> 00:05:31,990
+the clusters which is our choice that is shown in the plot with red color.
+
+87
+00:05:31,990 --> 00:05:37,540
+After the initialization step which was defining the centroid of each cluster,
+
+88
+00:05:37,540 --> 00:05:41,220
+we have to assign each customer to the closest center.
+
+89
+00:05:41,220 --> 00:05:44,755
+For this purpose, we have to calculate the distance of
+
+90
+00:05:44,755 --> 00:05:50,565
+each data point or in our case each customer from the centroid points.
+
+91
+00:05:50,565 --> 00:05:53,800
+As mentioned before, depending on the nature of
+
+92
+00:05:53,800 --> 00:05:57,215
+the data and the purpose for which clustering is being used,
+
+93
+00:05:57,215 --> 00:06:01,990
+different measures of distance may be used to place items into clusters.
+
+94
+00:06:01,990 --> 00:06:05,560
+Therefore, you will form a matrix where each row
+
+95
+00:06:05,560 --> 00:06:09,475
+represents the distance of a customer from each centroid.
+
+96
+00:06:09,475 --> 00:06:12,275
+It is called the distance matrix.
+
+97
+00:06:12,275 --> 00:06:18,250
+The main objective of K-means clustering is to minimize the distance of data points from
+
+98
+00:06:18,250 --> 00:06:24,095
+the centroid of it's cluster and maximize the distance from other cluster centroids.
+
+99
+00:06:24,095 --> 00:06:26,085
+So, in this step,
+
+100
+00:06:26,085 --> 00:06:29,900
+we have to find the closest centroid to each data point.
+
+101
+00:06:29,900 --> 00:06:35,235
+We can use the distance matrix to find the nearest centroid to data points.
+
+102
+00:06:35,235 --> 00:06:38,780
+Finding the closest centroid for each data point,
+
+103
+00:06:38,780 --> 00:06:42,005
+we assign each data point to that cluster.
+
+104
+00:06:42,005 --> 00:06:45,170
+In other words, all the customers will fall to
+
+105
+00:06:45,170 --> 00:06:48,860
+a cluster based on their distance from centroids.
+
+106
+00:06:48,860 --> 00:06:52,040
+We can easily say that it does not result in
+
+107
+00:06:52,040 --> 00:06:56,655
+good clusters because the centroids were chosen randomly from the first.
+
+108
+00:06:56,655 --> 00:06:59,790
+Indeed the model would have a high error.
+
+109
+00:06:59,790 --> 00:07:04,735
+Here, error is the total distance of each point from its centroid.
+
+110
+00:07:04,735 --> 00:07:09,555
+It can be shown as within-cluster sum of squares error.
+
+111
+00:07:09,555 --> 00:07:13,040
+Intuitively, we try to reduce this error.
+
+112
+00:07:13,040 --> 00:07:16,300
+It means we should shape clusters in such a way that
+
+113
+00:07:16,300 --> 00:07:21,375
+the total distance of all members of a cluster from its centroid be minimized.
+
+114
+00:07:21,375 --> 00:07:23,550
+Now, the question is,
+
+115
+00:07:23,550 --> 00:07:27,980
+how can we turn it into better clusters with less error?
+
+116
+00:07:27,980 --> 00:07:31,350
+Okay, we move centroids.
+
+117
+00:07:31,350 --> 00:07:34,495
+In the next step, each cluster center will be
+
+118
+00:07:34,495 --> 00:07:38,215
+updated to be the mean for data points in its cluster.
+
+119
+00:07:38,215 --> 00:07:42,725
+Indeed each centroid moves according to their cluster members.
+
+120
+00:07:42,725 --> 00:07:48,455
+In other words, the centroid of each of the three clusters becomes the new mean.
+
+121
+00:07:48,455 --> 00:07:59,610
+For example, if point A coordination is 7.4 and 3.6 and point B features are 7.8 and 3.8,
+
+122
+00:07:59,610 --> 00:08:02,810
+the new centroid of this cluster with two points,
+
+123
+00:08:02,810 --> 00:08:04,615
+would be the average of them,
+
+124
+00:08:04,615 --> 00:08:08,070
+which is 7.6 and 3.7.
+
+125
+00:08:08,070 --> 00:08:11,500
+Now, we have new centroids.
+
+126
+00:08:11,500 --> 00:08:14,040
+As you can guess, once again,
+
+127
+00:08:14,040 --> 00:08:18,810
+we will have to calculate the distance of all points from the new centroids.
+
+128
+00:08:18,810 --> 00:08:22,770
+The points are re-clustered and the centroids move again.
+
+129
+00:08:22,770 --> 00:08:26,595
+This continues until the centroids no longer move.
+
+130
+00:08:26,595 --> 00:08:29,730
+Please note that whenever a centroid moves,
+
+131
+00:08:29,730 --> 00:08:34,470
+each points distance to the centroid needs to be measured again.
+
+132
+00:08:34,470 --> 00:08:38,910
+Yes, K-means is an iterative algorithm and we
+
+133
+00:08:38,910 --> 00:08:43,265
+have to repeat steps two to four until the algorithm converges.
+
+134
+00:08:43,265 --> 00:08:47,215
+In each iteration, it will move the centroids,
+
+135
+00:08:47,215 --> 00:08:50,175
+calculate the distances from new centroids,
+
+136
+00:08:50,175 --> 00:08:53,505
+and assign data points to the nearest centroid.
+
+137
+00:08:53,505 --> 00:08:58,855
+It results in the clusters with minimum error or the most dense clusters.
+
+138
+00:08:58,855 --> 00:09:02,270
+However, as it is a heuristic algorithm,
+
+139
+00:09:02,270 --> 00:09:05,430
+there is no guarantee that it will converge to the global
+
+140
+00:09:05,430 --> 00:09:09,420
+optimum and the result may depend on the initial clusters.
+
+141
+00:09:09,420 --> 00:09:14,100
+It means, this algorithm is guaranteed to converge to a result,
+
+142
+00:09:14,100 --> 00:09:17,520
+but the result may be a local optimum i.e.
+
+143
+00:09:17,520 --> 00:09:20,925
+not necessarily the best possible outcome.
+
+144
+00:09:20,925 --> 00:09:22,735
+To solve this problem,
+
+145
+00:09:22,735 --> 00:09:28,480
+it is common to run the whole process multiple times with different starting conditions.
+
+146
+00:09:28,480 --> 00:09:31,615
+This means with randomized starting centroids,
+
+147
+00:09:31,615 --> 00:09:33,730
+it may give a better outcome,
+
+148
+00:09:33,730 --> 00:09:37,200
+and as the algorithm is usually very fast,
+
+149
+00:09:37,200 --> 00:09:41,039
+it wouldn't be any problem to run it multiple times.
+
+150
+00:09:41,039 --> 00:09:43,600
+Thanks for watching this video.

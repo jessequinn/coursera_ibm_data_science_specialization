@@ -1,0 +1,55 @@
+Welcome to this module of the capstone
+project course. In this video, we will start learning about Foursquare and how
+their data looks like. So let's get started. As a brief introduction for
+those who are still not very clear about Foursquare, Foursquare is a technology
+company that built a massive dataset of location data. What is interesting about
+Foursquare is that they were very smart about building their dataset. They
+actually crowd-sourced their data and had people use their app to build their dataset and add venues and complete any missing information they had in their
+dataset. Currently its location data is the most comprehensive out there, and
+quite accurate that it powers location data for many popular services like
+Apple Maps, Uber, Snapchat, Twitter and many others, and is currently being used
+by over 100,000 developers, and this number is only growing. To try out
+Foursquare you can either use their phone app or their online website. So you
+can go to Foursquare com, and this will be the landing page. In the centre, you
+will find two fields: one for what you're looking for and another one for the
+location of interest. So say it's your first time visiting New York City and
+you're saying at the Conrad hotel, but you're not quite familiar with the area
+and you would like to go for coffee. So what you do is you type words related to
+coffee like coffee or coffee shops and you specify the address around which to
+search. In this case, the Conrad Hotel is at 102 North End Avenue in New York and
+then you hit search. And here are the coffee shops that are returned by
+Foursquare. On the left you see the name, the category, and the address of each of
+the venues serving coffee around the Conrad Hotel. And on the right side, you
+see a map of the venues in the list on the left. According to the map, coffee shop number
+16 is the closest, and is called Kaffe 1668, and has an
+average rating of 9.0. If you click on it on the map, the list on the left scrolls
+to this venue. You can also explore the venue, so if you click on it you will be
+redirected to its page on Foursquare. This is the page pertaining to Kaffe 1668
+on Foursquare. On this page you can find all information in the Foursquare dataset about Kaffe 1668. This includes its name, full address, working hours, menu, and tips and images that users have posted about the shop and any of its drinks. You
+can check out the tips posted, so if you click the tips tab, it will take you to
+the tips section on this page. In this section, you can see how many tips users
+submitted about Kaffe 1668. We can see that there are 338 tips and reviews
+submitted. The first review is by a user named Jessica and her tip was upvoted
+by another user. The review says "Unique coffee options and hipster baristas to
+tell you all about them. Downstairs is usually empty and quiet.
+Don't be turned off by the giant fridge in the room, great space for getting work
+done." At that point, you might decide to know more about this user and check
+if she had given any other tips or reviews about other places nearby. So if
+you click on her name, you'll be redirected to her page on Foursquare.
+This is the page of Jessica on Foursquare. Here you can see that she is
+a very active Foursquare user. She actually posted 269 other tips and
+reviews, and has 38 followers, and is following 36 users. On her page you can
+also see what places she's been to, and what images or tips she posted about
+different places. So you decide to go to Kaffe 1668 for coffee, but you're
+interested in knowing what other spots are popular around the Conrad Hotel so you can go check them out after you have your coffee. You can again use
+the Foursquare website for that. You simply enter the location of interest
+and leave the other field empty. Once you hit Search, Foursquare will
+return all the popular spots around the Conrad Hotel. Notice how now the popular places are of different categories. So there is Central Park which is obviously
+a park and there is the Metropolitan Museum of Art and so on. What is great
+about the Foursquare data is that all this data is available for free so you
+can actually build something similar. Actually, all this data was available for free without any limitations until May 31st
+of 2018. We will learn more about the Foursquare database in the next couple
+of videos. In the next videos, I will demystify the process of communicating
+with the Foursquare database and explain to you what happens under the hood every
+time we clicked the search button to search for coffee shops or learn more
+about a shop or a Foursquare user. So I'll see you in the next video.

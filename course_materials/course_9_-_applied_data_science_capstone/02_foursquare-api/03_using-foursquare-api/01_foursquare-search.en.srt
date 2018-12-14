@@ -1,0 +1,315 @@
+1
+00:00:00,149 --> 00:00:06,960
+In this video, I will show you how to
+make calls to the Foursquare API to
+
+2
+00:00:06,960 --> 00:00:11,040
+search for venues, learn more about
+particular venues, and explore
+
+3
+00:00:11,040 --> 00:00:16,830
+Foursquare users. So let's get started.
+Communicating with the Foursquare
+
+4
+00:00:16,830 --> 00:00:22,769
+database is really very easy, all thanks
+to their RESTful API. You simply create a
+
+5
+00:00:22,769 --> 00:00:28,410
+uniform resource identifier, or URI, and
+you append it with extra parameters
+
+6
+00:00:28,410 --> 00:00:32,940
+depending on the data that you are
+seeking from the database. Any call
+
+7
+00:00:32,940 --> 00:00:43,216
+request you make is composed of, we can
+call this base URI, which is api.foursquare.com/v2,
+
+8
+00:00:43,216 --> 00:00:51,539
+and you can request
+data about venues, users, or tips. But,
+
+9
+00:00:51,539 --> 00:00:56,640
+every time you make a call request, you
+have to pass your developer account
+
+10
+00:00:56,640 --> 00:01:02,430
+credentials, which are your Client ID and
+Client Secret as well as what is called
+
+11
+00:01:02,430 --> 00:01:07,650
+the version of the API, which is simply a
+date. It is designed to give developers
+
+12
+00:01:07,650 --> 00:01:13,650
+the freedom to adapt to Foursquare API
+changes on their own schedule. In other
+
+13
+00:01:13,650 --> 00:01:18,150
+words, you request the data to be
+returned to you in the format that was
+
+14
+00:01:18,150 --> 00:01:25,290
+the latest up to the date defined by the
+version. In one of the previous videos, we
+
+15
+00:01:25,290 --> 00:01:31,350
+used Foursquare.com to search for coffee
+shops around the Conrad Hotel. How
+
+16
+00:01:31,350 --> 00:01:38,009
+can we do that using the Foursquare API?
+Well it is simple. You simply create a
+
+17
+00:01:38,009 --> 00:01:45,000
+URI starting with the base URI, and since
+you're searching for venues, you use the
+
+18
+00:01:45,000 --> 00:01:50,490
+venues group. And remember you always
+have to pass your Foursquare credentials
+
+19
+00:01:50,490 --> 00:01:56,549
+along with the version of the API. Again
+because we're searching for a particular
+
+20
+00:01:56,549 --> 00:02:02,430
+type of venues, we use the search
+endpoint and pass the address of the
+
+21
+00:02:02,430 --> 00:02:06,840
+Conrad Hotel as its latitude and
+longitude coordinates along with the
+
+22
+00:02:06,840 --> 00:02:13,560
+search query for coffee shops. This
+completes our URI,
+
+23
+00:02:13,560 --> 00:02:19,470
+so we make the call to the database and
+in return we get a JSON file of the
+
+24
+00:02:19,470 --> 00:02:25,230
+venues that match our query. Remember
+this is a regular call and with a
+
+25
+00:02:25,230 --> 00:02:29,760
+personal developer account, we can make
+up to 99,500
+
+26
+00:02:29,760 --> 00:02:41,989
+similar calls. For each venue, we get
+mostly its name, unique ID, location, and
+
+27
+00:02:41,989 --> 00:02:50,010
+category. Each venue added to the
+database is assigned a unique ID. In the
+
+28
+00:02:50,010 --> 00:02:54,720
+same previous video, we decided to learn
+more about one of the coffee shops that
+
+29
+00:02:54,720 --> 00:03:01,200
+were returned by Foursquare, namely Kaffe 1668. Now how can we do that using the
+
+30
+00:03:01,200 --> 00:03:07,860
+Foursquare API? Again it is very simple; it's only a matter of creating a URI
+
+31
+00:03:07,860 --> 00:03:14,040
+with all the correct parameters. In this
+case, we're still dealing with venues, so
+
+32
+00:03:14,040 --> 00:03:19,829
+we append the base URI with the venues
+group along with our credentials and the
+
+33
+00:03:19,829 --> 00:03:28,260
+API version. and then, we simply add Kaffe
+166'0s unique ID to the URI. And that's it.
+
+34
+00:03:28,260 --> 00:03:33,989
+This completes our URI, so we make the call
+to the Foursquare database and in return,
+
+35
+00:03:33,989 --> 00:03:40,019
+we receive a JSON file containing all
+the information the database has about
+
+36
+00:03:40,019 --> 00:03:46,530
+Kaffe 1668. Actually with a personal
+account, we only get two tips and photos
+
+37
+00:03:46,530 --> 00:03:52,049
+per venue and not the entire list of tips.
+And remember that this type of call is
+
+38
+00:03:52,049 --> 00:03:59,359
+premium so with a personal account we
+can only make 500 similar calls per day.
+
+39
+00:03:59,359 --> 00:04:05,730
+When we run this query for any venue, we
+mostly get the venue's name, URL or
+
+40
+00:04:05,730 --> 00:04:12,150
+website if they have an online presence,
+unique ID again, average rating, location,
+
+41
+00:04:12,150 --> 00:04:18,299
+contact information ,menu, and statistics
+in terms of the number of check-ins, and
+
+42
+00:04:18,299 --> 00:04:25,110
+finally, tips posted about the venue. The
+next thing we did was check out the tips
+
+43
+00:04:25,110 --> 00:04:30,000
+posted about Kaffe 1668. Doing that using the Foursquare
+
+44
+00:04:30,000 --> 00:04:35,460
+API is pretty simple. You build the same
+exact URI as the one you built to
+
+45
+00:04:35,460 --> 00:04:41,220
+learn more about the venue itself, but
+then you append the unique ID with the
+
+46
+00:04:41,220 --> 00:04:47,220
+tips endpoint. Then you proceed as usual; you make the call to the database and in
+
+47
+00:04:47,220 --> 00:04:52,620
+return you get a JSON file with only two
+tips since we have a personal account.
+
+48
+00:04:52,620 --> 00:04:59,930
+And remember that with premium calls
+you're limited to 500 calls per day.
+
+49
+00:05:00,680 --> 00:05:06,150
+Another thing we did when exploring
+Foursquare.com was exploring a
+
+50
+00:05:06,150 --> 00:05:11,849
+Foursquare user. In the video, we explored
+the page of Jessica whose tip was the
+
+51
+00:05:11,849 --> 00:05:17,490
+first in the tips section of Kaffe 1668.
+How can you get all the information
+
+52
+00:05:17,490 --> 00:05:23,460
+about a user using the API? It's
+basically the same concept as querying
+
+53
+00:05:23,460 --> 00:05:29,310
+for venues except that instead of using
+the venues group we use the users group.
+
+54
+00:05:29,310 --> 00:05:35,669
+And along with our credentials and the
+API version, we append the user's group
+
+55
+00:05:35,669 --> 00:05:42,810
+with the unique ID of the user. Just like
+venues, also each Foursquare user is
+
+56
+00:05:42,810 --> 00:05:47,039
+assigned a unique ID, which is
+essentially used to retrieve all the
+
+57
+00:05:47,039 --> 00:05:52,469
+information pertaining to them. Now calls
+made to retrieve information about users
+
+58
+00:05:52,469 --> 00:05:59,065
+are regular calls, so with a personal
+account we can make up to 99,500
+
+59
+00:05:59,065 --> 00:06:02,990
+similar calls per
+day. The database returns a JSON file
+
+60
+00:06:02,990 --> 00:06:10,889
+containing all the data it has about the
+user. For each user, we mostly get their
+
+61
+00:06:10,889 --> 00:06:18,240
+first and last name, their gender, contact
+information, unique ID, any Foursquare
+
+62
+00:06:18,240 --> 00:06:24,419
+friends they have, and their tips. In the
+next video, we will learn how to make
+
+63
+00:06:24,419 --> 00:06:28,590
+calls to explore a location and how to
+retrieve trending venues around a given
+
+64
+00:06:28,590 --> 00:06:33,050
+location. So I'll see you in the next
+video.

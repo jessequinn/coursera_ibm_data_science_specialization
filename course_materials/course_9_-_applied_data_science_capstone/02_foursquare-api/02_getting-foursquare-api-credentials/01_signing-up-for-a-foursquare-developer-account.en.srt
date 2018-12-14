@@ -1,0 +1,290 @@
+1
+00:00:00,060 --> 00:00:05,220
+Before we can learn how to retrieve data
+from the Foursquare database, we need to
+
+2
+00:00:05,220 --> 00:00:11,599
+create a developer account. Let me walk
+you through the process of doing that. So
+
+3
+00:00:12,620 --> 00:00:24,090
+let's go to Foursquare.com and click on
+the Developer tab on the top right
+
+4
+00:00:24,090 --> 00:00:26,930
+corner of the page.
+
+5
+00:00:27,470 --> 00:00:34,189
+This will take us to the developer page.
+Now click on Create Account.
+
+6
+00:00:35,450 --> 00:00:44,340
+Here, we don't have an account yet, so
+click on Sign up for Foursquare. Now on
+
+7
+00:00:44,340 --> 00:00:49,260
+this page, go ahead and fill in your
+personal information, and once you're
+
+8
+00:00:49,260 --> 00:00:52,489
+done hit the Sign up button.
+
+9
+00:00:54,230 --> 00:01:01,530
+Congratulations! Your developer account
+is now created. On May 31st of 2018,
+
+10
+00:01:01,530 --> 00:01:08,010
+Foursquare updated their API, and unlike
+before, now there are some limitations on
+
+11
+00:01:08,010 --> 00:01:12,930
+how many calls you can make to the API.
+So when you create a developer account,
+
+12
+00:01:12,930 --> 00:01:21,720
+the default type is the sandbox account,
+with 950 regular calls per day and 50
+
+13
+00:01:21,720 --> 00:01:26,970
+premium calls per day, and you can
+retrieve only one photo and one tip per
+
+14
+00:01:26,970 --> 00:01:31,920
+venue. I'll explain the different
+types of calls in a minute but let's
+
+15
+00:01:31,920 --> 00:01:36,990
+first go ahead and create a new app so
+we can start making calls to the API and
+
+16
+00:01:36,990 --> 00:01:47,100
+retrieving data. Click on create a new
+app. Let's name it coursera-capstone-project
+
+17
+00:01:47,100 --> 00:01:56,610
+and give it the URL
+www.courseracapstoneproject.com.
+
+18
+00:01:56,610 --> 00:02:01,350
+Normally, if you're leveraging the Foursquare data in a real app that you're
+
+19
+00:02:01,350 --> 00:02:06,630
+building, then you would type it here but
+since we're not building any app then it
+
+20
+00:02:06,630 --> 00:02:11,980
+doesn't really matter what URL we use. Once you're done,
+
+21
+00:02:11,980 --> 00:02:17,379
+check the two boxes and click continue.
+The next step is to choose your account
+
+22
+00:02:17,379 --> 00:02:21,610
+here, in case you're not very happy with
+the features you get with the default
+
+23
+00:02:21,610 --> 00:02:28,569
+sandbox account. Foursquare now has three
+developer verified account tiers and you
+
+24
+00:02:28,569 --> 00:02:33,010
+will get to know why I said verified in
+a second. There is the personal account
+
+25
+00:02:33,010 --> 00:02:39,310
+which is still free, and with it you get
+99,500
+
+26
+00:02:39,310 --> 00:02:46,750
+regular calls and 500 premium
+calls. That is actually 100 times more
+
+27
+00:02:46,750 --> 00:02:52,930
+calls than the default sandbox account.
+You'll also get access to over 105
+
+28
+00:02:52,930 --> 00:02:59,019
+million venues or points of interest, but
+you still only get two photos and two
+
+29
+00:02:59,019 --> 00:03:03,849
+tips per venue, which is just one more
+photo and tip compared to the sandbox
+
+30
+00:03:03,849 --> 00:03:10,750
+account. The other two tiers are for
+companies and enterprises so they don't
+
+31
+00:03:10,750 --> 00:03:13,720
+really apply to us. Now if you want to
+proceed,
+
+32
+00:03:13,720 --> 00:03:20,669
+choose the personal account and click
+continue. The reason why I said
+
+33
+00:03:20,669 --> 00:03:26,440
+verified account in the previous slide
+is because to be able to upgrade to the
+
+34
+00:03:26,440 --> 00:03:31,060
+personal account you will need to
+provide your credit card information, but
+
+35
+00:03:31,060 --> 00:03:36,489
+it won't be charged and will only be
+used for verification purposes. This step
+
+36
+00:03:36,489 --> 00:03:40,299
+is really optional and you don't have to
+fill in your credit card information if
+
+37
+00:03:40,299 --> 00:03:45,489
+you are not comfortable with that, but
+just be mindful of how many calls you
+
+38
+00:03:45,489 --> 00:03:50,049
+can make with the sandbox account if you
+end up using the API for any personal
+
+39
+00:03:50,049 --> 00:03:55,180
+projects. If you decide to upgrade to a
+personal account, fill in your credit
+
+40
+00:03:55,180 --> 00:04:01,239
+card information and click verify. If you
+don't wish to upgrade simply click on
+
+41
+00:04:01,239 --> 00:04:07,780
+"Return to My Apps" and that's it. You can
+now see the app that you just created
+
+42
+00:04:07,780 --> 00:04:13,299
+and your Foursquare API credentials: your
+Client ID and your Client Secret. You
+
+43
+00:04:13,299 --> 00:04:17,459
+will need to pass these credentials
+every time you make a call to the API.
+
+44
+00:04:17,459 --> 00:04:24,010
+Now what is a regular call and the
+premium call? The Foursquare API is
+
+45
+00:04:24,010 --> 00:04:29,860
+really very well documented
+so if you go to Docs, it will take you
+
+46
+00:04:29,860 --> 00:04:37,240
+to the documentation overview page. You can
+click on API and then endpoints overview,
+
+47
+00:04:37,240 --> 00:04:41,590
+and here you will find the different
+groups and endpoints available and
+
+48
+00:04:41,590 --> 00:04:46,810
+whether each endpoint falls under a
+regular or a premium call. So to search
+
+49
+00:04:46,810 --> 00:04:51,850
+for coffee shops around you for example,
+your call to the API would be considered
+
+50
+00:04:51,850 --> 00:04:56,770
+a regular call. You would use the search
+endpoint to search for coffee shops
+
+51
+00:04:56,770 --> 00:05:03,639
+around you. This is considered a regular
+call but learning more about Kaffe 1668
+
+52
+00:05:03,639 --> 00:05:07,389
+from the previous video, would be
+considered a premium call. So you would
+
+53
+00:05:07,389 --> 00:05:14,470
+either use the details endpoint which is
+considered a premium call or if you want
+
+54
+00:05:14,470 --> 00:05:20,740
+to get the venue's tips or the hours or
+the menu or any links, these are all
+
+55
+00:05:20,740 --> 00:05:25,330
+considered a premium call. Please
+bookmark this page as you will find it
+
+56
+00:05:25,330 --> 00:05:30,669
+very useful when working with the
+Foursquare API. At this point you should
+
+57
+00:05:30,669 --> 00:05:36,160
+be ready to start making calls to the
+Foursquare API. In the next video, I will
+
+58
+00:05:36,160 --> 00:05:40,300
+show you how you can start communicating
+with the Foursquare database and making
+
+59
+00:05:40,300 --> 00:05:46,620
+calls to its API to retrieve location
+data. I'll see you in the next video.

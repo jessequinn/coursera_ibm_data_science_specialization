@@ -1,0 +1,54 @@
+1
+00:00:00,500 --> 00:00:05,100
+Now that you are acquainted with the
+Foursquare API you should be ready to
+
+2
+00:00:05,100 --> 00:00:11,370
+start analyzing any neighborhood or city
+using location data. However we decided
+
+3
+00:00:11,370 --> 00:00:16,980
+to explore neighborhoods, segment them,
+and group them into clusters to find
+
+4
+00:00:16,980 --> 00:00:22,020
+similar neighborhoods in a big city like
+New York or Toronto. To be able to do
+
+5
+00:00:22,020 --> 00:00:26,789
+that, we need to learn how to cluster
+data which is a form of unsupervised
+
+6
+00:00:26,789 --> 00:00:31,260
+machine learning. So in the next video,
+we will learn about a very popular
+
+7
+00:00:31,260 --> 00:00:35,370
+clustering algorithm, called k-means.
+Once you watch the next video and
+
+8
+00:00:35,370 --> 00:00:39,300
+complete the lab on clustering, you
+should be ready to start segmenting and
+
+9
+00:00:39,300 --> 00:00:43,770
+clustering neighborhoods in different
+cities. So in this module,
+
+10
+00:00:43,770 --> 00:00:47,460
+together we will segment and cluster
+neighborhoods in the city of New York.
+
+11
+00:00:47,460 --> 00:00:53,780
+And now I'll leave you with the video on
+clustering.

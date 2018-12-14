@@ -1,0 +1,12 @@
+Now that you are acquainted with the
+Foursquare API you should be ready to start analyzing any neighborhood or city
+using location data. However we decided to explore neighborhoods, segment them,
+and group them into clusters to find similar neighborhoods in a big city like
+New York or Toronto. To be able to do that, we need to learn how to cluster
+data which is a form of unsupervised machine learning. So in the next video,
+we will learn about a very popular clustering algorithm, called k-means.
+Once you watch the next video and complete the lab on clustering, you
+should be ready to start segmenting and clustering neighborhoods in different
+cities. So in this module, together we will segment and cluster
+neighborhoods in the city of New York. And now I'll leave you with the video on
+clustering.
